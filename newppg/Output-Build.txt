@@ -1,0 +1,37 @@
+﻿------ Build started: Project: newppg, Configuration: Debug AVR ------
+Build started.
+Project "newppg.cproj" (default targets):
+Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
+Target "CoreBuild" in file "C:\Program Files (x86)\Atmel\Atmel Studio 6.0\Vs\Compiler.targets" from project "C:\Users\HP\Documents\Atmel Studio\newppg\newppg\newppg.cproj" (target "Build" depends on it):
+	Task "RunCompilerTask"
+		C:\Program Files (x86)\Atmel\Atmel Studio 6.0\make\make.exe all 
+		Building file: .././newppg.c
+		Invoking: AVR/GNU C Compiler : (AVR_8_bit_GNU_Toolchain_3.4.0_663) 4.6.2
+		"C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr-gcc.exe" -funsigned-char -funsigned-bitfields -O1 -fpack-struct -fshort-enums -g2 -Wall -c -std=gnu99 -MD -MP -MF "newppg.d" -MT"newppg.d" -MT"newppg.o"  -mmcu=atmega128   -o"newppg.o" ".././newppg.c" 
+C:\Users\HP\Documents\Atmel Studio\newppg\newppg\newppg.c(51,6): return type of 'main' is not 'int' [-Wmain]
+		.././newppg.c: In function 'main':
+C:\Users\HP\Documents\Atmel Studio\newppg\newppg\newppg.c(53,11): variable 'result' set but not used [-Wunused-but-set-variable]
+		Finished building: .././newppg.c
+		Building target: newppg.elf
+		Invoking: AVR/GNU Linker : (AVR_8_bit_GNU_Toolchain_3.4.0_663) 4.6.2
+		"C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr-gcc.exe" -o newppg.elf  newppg.o USART_128.o   -Wl,-Map="newppg.map" -Wl,--start-group -Wl,-lm  -Wl,--end-group  -mmcu=atmega128  
+		Finished building target: newppg.elf
+		"C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature  "newppg.elf" "newppg.hex"
+		"C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr-objcopy.exe" -j .eeprom  --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0  --no-change-warnings -O ihex "newppg.elf" "newppg.eep" || exit 0
+		"C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr-objdump.exe" -h -S "newppg.elf" > "newppg.lss"
+		"C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr-size.exe" "newppg.elf"
+		   text	   data	    bss	    dec	    hex	filename
+		    736	      0	      0	    736	    2e0	newppg.elf
+	Done executing task "RunCompilerTask".
+	Task "RunOutputFileVerifyTask"
+				Program Memory Usage 	:	736 bytes   0.6 % Full
+				Data Memory Usage 		:	0 bytes   0.0 % Full
+	Done executing task "RunOutputFileVerifyTask".
+Done building target "CoreBuild" in project "newppg.cproj".
+Target "PostBuildEvent" skipped, due to false condition; ('$(PostBuildEvent)' != '') was evaluated as ('' != '').
+Target "Build" in file "C:\Program Files (x86)\Atmel\Atmel Studio 6.0\Vs\Avr.common.targets" from project "C:\Users\HP\Documents\Atmel Studio\newppg\newppg\newppg.cproj" (entry point):
+Done building target "Build" in project "newppg.cproj".
+Done building project "newppg.cproj".
+
+Build succeeded.
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
